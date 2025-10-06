@@ -14,7 +14,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        version: [3.9, 3.10]
+        version: ['3.9', '3.10']
 
     steps:
       - name: code checkout # copy code to runner
@@ -45,7 +45,7 @@ jobs:
       - name: setup python # setup python
         uses: actions/setup-python@v4
         with:
-          python-version: 3.10
+          python-version: '3.10'
 
       - name: run unit tests # run unit tests
         run: |
